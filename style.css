@@ -1,0 +1,274 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Alata;
+
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#page1{
+    min-height: 100vh;
+    width: 100%;
+}
+.cursor{
+    height: 20px;
+    width: 20px;
+    background-color: black;
+    border-radius: 50px;
+    position: fixed;
+    z-index: 9999;
+
+}
+
+#page1 nav{
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    background-color: rgb(178, 174, 174);
+}
+
+#left-part img{
+    width: 50vw;
+    height: 9vh;
+    mix-blend-mode: color-burn;
+}
+#mid-part{
+    display: flex;
+    gap: 50px;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-size: 0.8vw;
+    color:rgb(50, 50, 50);
+}
+
+#right-part{
+    display: flex;
+    gap: 50px;
+}
+#right-part button{
+    padding: 3vh 2vw;
+    border: 2px solid black;
+    color: black;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+#right-part button::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    bottom: -100%;
+    left: 0;
+    border-radius: 50%;
+    transition: 0.5s;
+    z-index:-1;
+}
+#right-part button:hover{
+    color: white
+}
+#right-part button:hover::after,
+button:focus::after
+{
+    bottom: 0;
+    border-radius: 0;
+}
+
+
+.center{
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10vw;
+}
+.img-div{
+    height: 60vh;
+    width: 40%;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+   
+}
+.img-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    transition: 0.8s ease-out;
+}
+.img-div:hover img{
+    transform: scale(1.1);
+}
+.text-div{
+    height: 50vh;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    font-size: 1.5vw;
+    gap: 10vh;
+}
+.text-div h1{
+    font-size: 4vw;
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+}
+.top-sec{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8vw;
+}
+.left-div{
+    height: 100vh;
+    width: 45%;
+    position: relative;
+    margin-top: 10vh;
+}
+.right-div{
+    height: 50vh;
+    width: 50%;
+    position: relative;
+}
+.small-div{
+    height: 35vh;
+    width: 18vw;
+    display: flex;
+    position: absolute;
+    border-radius: 50% 30px 20px 40px;
+    overflow: hidden;
+}
+.small-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.two{
+    top: 20%;
+    right: 4%;
+    border-radius: 30px 50% 20px 40px;
+}
+.three{
+    top: 50%;
+    left: 3%;
+}
+.four{
+    bottom: 1%;
+    right: 4%;
+    border-radius: 30px 50% 20px 40px;
+}
+.right-div h1{
+    font-size: 3vw;
+    word-spacing: -5px;
+    color: green
+}
+.right-div p{
+    font-size: 1vw;
+    margin-top: 20px;
+    margin-bottom: 30px
+}
+.right-div button{
+    padding: 3vh 2vw;
+    border: 2px solid rgb(69, 170, 23);
+    color: black;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-weight: 600;
+}
+.right-div button::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(69, 170, 23);
+    bottom: -100%;
+    left: 0;
+    border-radius: 50%;
+    transition: 0.5s;
+    z-index:-1;
+}
+
+.right-div button:hover{
+    color: white;
+}
+.right-div button:hover::after,
+button:focus::after
+{
+    bottom: 0;
+    border-radius: 0;
+}
+
+#page3{
+    height: 100vh;
+    width: 100%;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+.text-container{
+    height: 45%;
+    width: 70%;
+    font-size: 1.3vw;
+}
+#page3 h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+    left: 60px;
+    line-height: 120px;
+    margin-bottom: 40px;
+    letter-spacing: 18px;
+}
+#page3 h1>span{
+    position: relative;
+    left: 120px; 
+}
+#page3 h1::after{
+    content: '';
+    height: 1vh;
+    width: 55vw;
+    position: absolute;
+    background-color: black;
+    left: 0;
+    bottom: -20px;
+    transform: scaleX(0);
+    transition: all 0.4s ease;
+}
+#page3 h1:hover::after{
+    transform: scaleX(1);
+}
+footer{
+    background-color: aqua;
+    
+}
+
+
+
+
+
